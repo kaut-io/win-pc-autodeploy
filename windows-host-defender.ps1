@@ -10,13 +10,19 @@
 # For Prisma Cloud Compute (On-Premise) see: https://prisma.pan.dev/api/cloud/cwpp/how-to-eval-console#for-self-hosted-installations
 #   Example: "https://twistlock.example.com" or "https://twistlock.example.com:8083"
 
-$console = "";
+# $console = "";
 
 # The credentials to use to access the Console API.
 # Either the username / password (or, preferably, the access key / secret key) of a user with permissions to deploy Defender.
 
-$user = "";
-$pass = "";
+# $user = "";
+# $pass = "";
+
+# If you don't want to statically set the credentials above, you can read from creds.json
+$credentials = Get-Content -Path '.\creds.json' | ConvertFrom-Json
+$console = $credentials.console
+$user = $credentials.user
+$pass = $credentials.pass
 
 
 # Set Proxy if needed for internet access 
