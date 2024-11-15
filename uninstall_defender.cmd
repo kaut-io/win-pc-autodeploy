@@ -1,0 +1,1 @@
+& 'C:\Program Files\Twistlock\scripts\defender.ps1' -uninstall

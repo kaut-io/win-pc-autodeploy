@@ -82,3 +82,6 @@ if (-not $consoleCN) {
 
 
 # UnSet Proxy if set above
+
+# Remove scheduled task once completed Name must match below. 
+schtasks /delete /tn "install_defender" /f
